@@ -1,0 +1,425 @@
+.Dashboard.theme-white, .Dashboard.theme-blue, .Dashboard.theme-gradient   {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 12vh 12px 12px 5px;
+    width: 100%;
+    height: 92vh;
+    
+    border-radius: 2rem;
+  }
+  
+  .Dashboard.theme-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 12vh 12px 12px 5px;
+    width: 100%;
+    height: 92vh;
+    
+    border-radius: 2rem;
+  }
+
+
+  .dashboardSecondContainer {
+    display: flex !important;
+    // flex-direction: row;
+    // flex-direction: column;
+    // align-items: center;
+    gap: 10px;
+    margin: 18vh 2vh 0 2vh;
+    height: 95%;
+    width: 100%;
+    padding: 10px;
+    background: var(--glass);
+    overflow: hidden;
+    .MainDash{
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        margin-left: 2%;
+        width: 75%;
+
+        .Cards 
+        {
+            display: flex;
+            gap: 10px;
+            margin-top: 1vh;
+
+
+            .parentContainer
+            {
+                width: 100%;
+                
+
+                .CompactCard {
+                    display: flex;
+                    flex: 1;
+                    height: 12rem !important;
+                    border-radius: 0.7rem;
+                    color: white;
+                    padding: 1rem;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+
+                    .radialBar {
+                        flex: 1 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        gap: 1rem;
+
+                        > span {
+                            font-size: 17px;
+                            font-weight: bold;
+                          }
+                      }
+
+                    .detail {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: space-between;
+
+                        > span:nth-child(2) {
+                            font-size: 22px;
+                            font-weight: bold;
+                          }
+
+                        > span:nth-child(3) {
+                            font-size: 12px;
+                          }
+                      }
+                  }
+
+                  .ExpandedCard {
+                    position: absolute;
+                    width: 60%;
+                    height: 70vh;
+                    z-index: 9;
+                    left: 13rem;
+                    border-radius: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 1rem;
+
+                    > span:nth-of-type(1) {
+                        color: white;
+                        font-size: 26px;
+                        font-weight: bold;
+                        text-shadow: 0px 0px 15px white;
+                      }
+                    > span:nth-of-type(2) {
+                        color: rgb(236, 236, 236);
+                        font-size: 15px;
+                      }
+
+                    .chartContainer {
+                        width: 70%;
+                      }
+                      
+                  }
+              }
+        }
+
+        .dropdown-box {
+            margin-top: 1vh;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            /* position: absolute; */
+            top: 50px; /* Adjust the top position based on your design */
+            right: 10px; /* Adjust the right position based on your design */
+           
+            background-color: linear-gradient(
+              106.37deg,
+              rgb(187, 103, 255) 0%, 
+              rgb(196, 132, 243) 100%,
+              rgb(255, 145, 157) 0%, rgb(252, 146, 157) 100%);
+            border: 1px solid #ccc;
+            border-radius:  0.7rem;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+            /* z-index: 1000; */
+
+
+            .ui.fluid.dropdown {
+                margin-left: 2vh;
+                margin-bottom: 1vh;
+                margin-right: 2vh;
+                display: block;
+                background: var(--dropDownColor);
+                /* width: 30% */
+              }
+          }
+
+
+          .transferChartContainer {
+            display: flex;
+            margin-top: 2vh;
+            max-height: 100%;
+
+            .transferBarChart {
+                /* margin-top: 1%; */
+                margin-bottom: 10%;
+                padding: 10px;
+                width: 50%;
+                height: 95%;
+            }
+
+            .transferPieChart {
+                width: 50%;
+
+
+                .sales-breakdown-container {
+                    display: flex !important;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    height: 75%;
+
+                      
+                    .data-row {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        white-space: nowrap;
+                        margin-right: 30px;
+                        >h1 {
+                          margin: 0;
+                          font-weight: bold;
+                          font-size: 12px;
+                          white-space: nowrap;
+                          /* Add styles for the data label */
+                        }
+                        .abcd {
+                            display: flex;
+                            flex-direction: row;
+                            white-space: nowrap;
+                            align-items: center;
+
+                            >h1 {
+                              margin: 0;
+                              font-weight: bold;
+                              font-size: 12px;
+                              white-space: nowrap;
+                              /* Add styles for the data label */
+                            }
+                          }
+                        
+                          .data-text-bold {
+                            margin-left: 80px;
+                            font-size: 14px;
+                            font-weight: bold;
+                            white-space: nowrap;
+                            /* Add styles for the bold data text */
+                            .color-box {
+                                // margin-left: 40px;
+                                // margin-top: 5px;
+                                height: 10px;
+                                width: 10px;
+                                /* Add styles for the color box */
+                              }
+
+                              
+                          }
+                          
+                    }
+                
+                  }
+            }
+          }
+    }
+
+
+    .RightSide{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        /* padding-top: 1rem; */
+        width: 25%;
+        margin-right: 2%;
+        /* justify-content: space-evenly; */
+
+        .UpdateHeading1 {
+            height: 50%;
+            margin-top: 2%;
+
+            .headingContainer {
+                margin-top: 0.5%;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                /* position: absolute; */
+                top: 50px; /* Adjust the top position based on your design */
+                right: 10px; /* Adjust the right position based on your design */
+                margin-bottom: 2% ;
+               height: 18%;
+                background-color: linear-gradient(
+                  106.37deg,
+                  rgb(187, 103, 255) 0%, 
+                  rgb(196, 132, 243) 100%,
+                  rgb(255, 145, 157) 0%, rgb(252, 146, 157) 100%);
+                border: 1px solid #ccc;
+                border-radius:  0.7rem;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+                z-index: 1000;
+
+                > h3 {
+                    white-space: nowrap;
+                    margin-left: 5%;
+                }
+              }
+              .Updates{
+                width: 100%;
+                height: 70%;
+                background: white;
+                border-radius: 0.7rem;
+                padding: 1rem;
+                gap: 0.2rem;
+                display: flex;
+                flex-direction: column;
+                font-size: 13px;
+                overflow: auto;
+
+                &::-webkit-scrollbar-track {
+                    background: var(--scrollColor) /* Color of the scrollbar track */
+                }
+
+                &::-webkit-scrollbar-track-piece {
+                  background: var(--scrollColor) /* Color of the scrollbar track */
+              }
+
+                .update{
+                    display: flex;
+                    gap: 0.2rem;
+
+                    .noti>div>span:nth-of-type(1){
+                        font-weight: bold;
+                    }
+                }
+            }            
+            
+        }
+    }
+    
+  }
+
+  .parentContainer.Sales{
+    background: var(--salesBoxBackground);
+    box-shadow: var(--saleBoxShadow);
+  }
+
+  .parentContainer.Purchase{
+    background: var(--purchaseBoxBackground);
+    box-shadow: var(--purchaseBoxShadow);
+  }
+
+  .parentContainer.Expenses{
+    background: var(--expensesBoxBackground);
+    box-shadow:var(--expenseBoxShadow);
+  }
+
+  
+  .ExpandedCard.Sales {
+    position: absolute;
+    width: 60%;
+    height: 70vh;
+    z-index: 9;
+    left: 13rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--salesBoxBackground);
+    box-shadow: var(--saleBoxShadow);
+    padding: 1rem;
+
+    > span:nth-of-type(1) {
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+        text-shadow: 0px 0px 15px white;
+      }
+    > span:nth-of-type(2) {
+        color: rgb(236, 236, 236);
+        font-size: 15px;
+      }
+
+    .chartContainer {
+        width: 70%;
+      }
+      
+  }
+
+  .ExpandedCard.Expenses {
+    position: absolute;
+    width: 60%;
+    height: 70vh;
+    z-index: 9;
+    left: 13rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--expensesBoxBackground);
+    box-shadow: var(--expenseBoxShadow);
+    padding: 1rem;
+
+    > span:nth-of-type(1) {
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+        text-shadow: 0px 0px 15px white;
+      }
+    > span:nth-of-type(2) {
+        color: rgb(236, 236, 236);
+        font-size: 15px;
+      }
+
+    .chartContainer {
+        width: 70%;
+      }
+      
+  }
+
+  
+  .ExpandedCard.Purchase {
+    position: absolute;
+    width: 60%;
+    height: 70vh;
+    z-index: 9;
+    left: 13rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--purchaseBoxBackground);
+    box-shadow: var(--purchaseBoxShadow);
+    padding: 1rem;
+
+    > span:nth-of-type(1) {
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+        text-shadow: 0px 0px 15px white;
+      }
+    > span:nth-of-type(2) {
+        color: rgb(236, 236, 236);
+        font-size: 15px;
+      }
+
+    .chartContainer {
+        width: 70%;
+      }
+      
+  }

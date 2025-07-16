@@ -1,0 +1,552 @@
+.barcode-generator-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    margin-top: 10vh;
+    background-color: #f5f7fa;
+    padding: 2rem;
+    
+    .barcode-generator-content {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      
+      .barcode-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 1rem;
+        
+        .page-title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #333;
+          margin: 0;
+        }
+        
+        .barcode-actions {
+          display: flex;
+          gap: 1rem;
+          
+          .settings-button,
+          .copy-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #f0f2f5;
+            color: #333;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            
+            &:hover {
+              background-color: #e0e2e5;
+            }
+            
+            svg {
+              font-size: 1.2rem;
+            }
+          }
+          
+          .copy-button {
+            background-color: #e8f4fd;
+            color: #0078d4;
+            
+            &:hover {
+              background-color: #d0e7fb;
+            }
+            
+            &:disabled {
+              opacity: 0.6;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+      
+      .loading-container,
+      .error-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 255px;
+        
+        .loader {
+          border: 4px solid #f3f3f3;
+          border-top: 4px solid #3498db;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          animation: spin 1s linear infinite;
+          margin-bottom: 1rem;
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        .error-message {
+          color: #e53935;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+      
+      .barcode-main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        .barcode-settings {
+          background-color: #f9f9f9;
+          border-radius: 6px;
+          padding: 1.5rem;
+          
+          h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #333;
+          }
+          
+          .settings-group {
+            margin-bottom: 1.5rem;
+            
+            h4 {
+              font-size: 1rem;
+              color: #555;
+              margin-bottom: 0.75rem;
+              border-bottom: 1px solid #eee;
+              padding-bottom: 0.5rem;
+            }
+            
+            .setting-item {
+              margin-bottom: 0.75rem;
+              
+              label {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                cursor: pointer;
+                font-size: 0.95rem;
+                
+                input[type="checkbox"] {
+                  width: 16px;
+                  height: 16px;
+                  cursor: pointer;
+                }
+                
+                input[type="number"] {
+                  width: 60px;
+                  padding: 0.25rem;
+                  border: 1px solid #ddd;
+                  border-radius: 4px;
+                  margin-left: 0.5rem;
+                }
+              }
+              
+              .size-options {
+                display: flex;
+                gap: 1rem;
+                margin-top: 0.5rem;
+                
+                label {
+                  padding: 0.5rem 1rem;
+                  border: 1px solid #ddd;
+                  border-radius: 4px;
+                  transition: all 0.2s ease;
+                  
+                  &.selected {
+                    background-color: #e8f4fd;
+                    border-color: #0078d4;
+                    color: #0078d4;
+                  }
+                  
+                  input[type="radio"] {
+                    position: absolute;
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+        
+        .barcode-preview-container {
+          .preview-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+          }
+          
+          .barcode-preview {
+            border: 1px dashed #ccc;
+            border-radius: 6px;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            background-color: #fafafa;
+            max-height: 255px;
+            overflow: auto;
+            
+            .print-container {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 1rem;
+              justify-content: center;
+              width: 100%;
+              
+              .barcode-label {
+                background-color: white;
+                border-radius: 4px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                
+                &.small {
+                  width: 200px;
+                }
+                
+                &.medium {
+                  width: 300px;
+                }
+                
+                &.large {
+                  width: 400px;
+                }
+                
+                .barcode-content {
+                  padding: 1rem;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  
+                  .name-color {
+                    text-align: center;
+                    margin-bottom: 0.75rem;
+                    width: 100%;
+                    
+                    .product-name {
+                      font-size: 1.1rem;
+                      font-weight: 600;
+                      margin: 0;
+                      color: #333;
+                      line-height: 1.3;
+                      
+                      .color-name {
+                        color: #0078d4;
+                        font-weight: 500;
+                      }
+                    }
+                  }
+                  
+                  .product-details {
+                    display: flex;
+                    gap: 0.5rem;
+                    margin-bottom: 0.75rem;
+                    font-size: 0.85rem;
+                    color: #666;
+                    
+                    .product-category,
+                    .product-company {
+                      background-color: #f0f2f5;
+                      padding: 0.25rem 0.5rem;
+                      border-radius: 4px;
+                    }
+                  }
+                  
+                  .barcode-container {
+                    margin: 0.5rem 0;
+                    
+                    svg {
+                      max-width: 100%;
+                    }
+                  }
+                  
+                  .product-price {
+                    margin-top: 0.5rem;
+                    font-size: 1rem;
+                    
+                    .price-label {
+                      font-weight: 500;
+                      margin-right: 0.25rem;
+                    }
+                    
+                    .price-value {
+                      font-weight: 600;
+                      color: #0078d4;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      .barcode-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e0e0e0;
+        
+        .back-button,
+        .print-button {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.75rem 1.5rem;
+          border-radius: 4px;
+          transition: all 0.2s ease;
+          
+          svg {
+            font-size: 1.2rem;
+          }
+        }
+        
+        .back-button {
+          background-color: #f0f2f5;
+          color: #333;
+          border: none;
+          
+          &:hover {
+            background-color: #e0e2e5;
+          }
+        }
+        
+        .print-button {
+          background-color: #0078d4;
+          color: white;
+          border: none;
+          
+          &:hover {
+            background-color: #006cbe;
+          }
+          
+          &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Adjust for different sizes */
+  .barcode-label {
+    &.small .name-color .product-name {
+      font-size: 0.95rem;
+    }
+    
+    &.medium .name-color .product-name {
+      font-size: 1.1rem;
+    }
+    
+    &.large .name-color .product-name {
+      font-size: 1.25rem;
+    }
+  }
+  
+  .print-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    
+    &.single-label {
+      justify-content: center;
+    }
+    
+    &.grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+    
+    &.grid-3x3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+    }
+    
+    &.grid-4x4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+    }
+    
+    &.grid-auto {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 1rem;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .barcode-generator-container {
+      padding: 0 !important;
+      background: none !important;
+      margin: 0 !important;
+    }
+    
+    .barcode-generator-content {
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: none !important;
+    }
+    
+    .barcode-header,
+    .barcode-settings,
+    .preview-title,
+    .barcode-footer {
+      display: none !important;
+    }
+    
+    .barcode-preview {
+      border: none !important;
+      padding: 0 !important;
+      background: none !important;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+    
+    .barcode-main-content {
+      gap: 0 !important;
+    }
+    
+    .barcode-preview-container {
+      margin: 0 !important;
+    }
+    
+    .print-container {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(48mm, 1fr)) !important;
+      grid-gap: 5mm !important;
+      width: 100% !important;
+    }
+    
+    .barcode-label {
+      box-shadow: none !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      margin: 0 !important;
+      width: auto !important;
+      border: 1px solid #eee !important;
+      
+      &.small, &.medium, &.large {
+        width: auto !important;
+      }
+    }
+    
+    .barcode-content {
+      padding: 5mm !important;
+    }
+    
+    .name-color {
+      margin-bottom: 2mm !important;
+      
+      .product-name {
+        text-align: center !important;
+        font-size: 10pt !important;
+        
+        .color-name {
+          font-size: 9pt !important;
+        }
+      }
+    }
+    
+    .product-details {
+        text-align: center;
+      margin-bottom: 2mm !important;
+      font-size: 8pt !important;
+      
+      .product-category, .product-company {
+        text-align: center !important;
+        padding: 1mm 2mm !important;
+      }
+    }
+    
+    .barcode-container {
+      margin: 2mm 0 !important;
+      
+      svg {
+        height: auto !important;
+      }
+    }
+    
+    .product-price {
+        text-align: center !important;
+      font-size: 9pt !important;
+      margin-top: 2mm !important;
+    }
+  }
+  
+  /* Print styles for name-color */
+  @media print {
+    .name-color {
+      margin-bottom: 0.5rem !important;
+    }
+    
+    .product-name {
+      font-size: 12pt !important;
+      
+      .color-name {
+        font-size: 11pt !important;
+      }
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .barcode-generator-container {
+      padding: 1rem;
+    }
+    
+    .barcode-generator-content {
+      padding: 1rem;
+    }
+    
+    .barcode-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      
+      .barcode-actions {
+        width: 100%;
+      }
+    }
+    
+    .barcode-main-content {
+      gap: 1rem;
+    }
+    
+    .barcode-preview {
+      padding: 1rem !important;
+    }
+    
+    .barcode-footer {
+      flex-direction: column;
+      gap: 1rem;
+      
+      .back-button,
+      .print-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+  

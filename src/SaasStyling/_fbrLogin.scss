@@ -1,0 +1,653 @@
+:root {
+  --qe-primary: #4169e1;
+  --qe-secondary: #1e90ff;
+  --qe-accent: #fca61f;
+  --qe-text-primary: #242d49;
+  --qe-text-secondary: #788097;
+  --qe-error: #ff4d4f;
+  --qe-success: #52c41a;
+  --qe-glass: rgba(255, 255, 255, 0.54);
+  --qe-box-shadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --qe-sm-box-shadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+
+.qe_auth_container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(106.37deg, #e3f2fd 29.63%, #bbdefb 51.55%, #90caf9 90.85%);
+  padding: 10px;
+  font-family: 'Inter', sans-serif;
+
+  .qe_auth_glassBox {
+    background: var(--qe-glass);
+    border-radius: 2rem;
+    backdrop-filter: blur(16px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--qe-box-shadow);
+    padding: 1.5rem;
+    width: 96%;
+    max-width: 420px;
+    animation: fadeIn 0.5s ease-out;
+
+    .qe_auth_content {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 1.5rem;
+      padding: 1.3rem;
+      box-shadow: var(--qe-sm-box-shadow);
+
+      .qe_auth_header {
+        text-align: center;
+        margin-bottom: 1rem;
+
+        .qe_auth_logo {
+          font-size: 3rem !important;
+          color: var(--qe-primary);
+          margin-bottom: 1rem;
+          animation: float 3s ease-in-out infinite;
+        }
+
+        .qe_auth_title {
+          color: var(--qe-text-primary);
+          font-size: 1.8rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+
+        .qe_auth_subtitle {
+          color: var(--qe-text-secondary);
+          font-size: 0.9rem;
+        }
+      }
+
+      .qe_auth_form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        .qe_auth_error {
+          padding: 0.8rem;
+          border-radius: 0.5rem;
+          background: rgba(255, 77, 79, 0.1);
+          color: var(--qe-error);
+          font-size: 0.9rem;
+          text-align: center;
+          animation: shake 0.5s ease-in-out;
+        }
+
+        .qe_auth_inputWrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          .qe_auth_inputGroup {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .qe_auth_inputIcon {
+              position: absolute;
+              left: 1rem;
+              color: var(--qe-text-secondary);
+              transition: color 0.3s ease;
+            }
+
+            .qe_auth_input {
+              width: 100%;
+              padding: 0.8rem 1rem 0.8rem 3rem;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              border-radius: 0.8rem;
+              background: rgba(255, 255, 255, 0.8);
+              color: var(--qe-text-primary);
+              font-size: 0.9rem;
+              transition: all 0.3s ease;
+
+              &:focus {
+                outline: none;
+                border-color: var(--qe-primary);
+                background: white;
+                box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.1);
+              }
+
+              &:focus + .qe_auth_inputIcon {
+                color: var(--qe-primary);
+              }
+            }
+
+            .qe_auth_passwordToggle {
+              position: absolute;
+              right: 1rem;
+              cursor: pointer;
+              color: var(--qe-text-secondary);
+              transition: color 0.3s ease;
+
+              &:hover {
+                color: var(--qe-primary);
+              }
+
+              .qe_auth_visibilityIcon {
+                font-size: 1.2rem;
+              }
+            }
+
+            .qe_auth_inputBorder {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              height: 2px;
+              transition: width 0.3s ease;
+            }
+          }
+        }
+
+        .qe_auth_button {
+          position: relative;
+          padding: 0.8rem;
+          border: none;
+          border-radius: 0.8rem;
+          background: linear-gradient(135deg, var(--qe-primary) 0%, var(--qe-secondary) 100%);
+          color: white;
+          font-weight: 600;
+          font-size: 1rem;
+          text-align: center;
+          cursor: pointer;
+          overflow: hidden;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(65, 105, 225, 0.4);
+          }
+
+          &:active {
+            transform: translateY(0);
+          }
+
+          .qe_auth_buttonGlow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+            transform: rotate(45deg);
+            animation: glow 3s linear infinite;
+            pointer-events: none;
+          }
+        }
+
+        .qe_auth_forgotLink {
+          text-align: center;
+          color: var(--qe-primary);
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: var(--qe-secondary);
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .qe_auth_footer {
+        margin-top: 0.5rem;
+        text-align: center;
+
+        .qe_auth_company {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.5rem 1rem;
+          border-radius: 2rem;
+          background: rgba(255, 255, 255, 0.9);
+          box-shadow: var(--qe-sm-box-shadow);
+
+          .qe_auth_companyText {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+
+            .qe_auth_poweredBy {
+              font-size: 0.7rem;
+              color: var(--qe-text-secondary);
+            }
+
+            .qe_auth_companyLogo {
+              height: 30px;
+              max-width: 120px;
+              object-fit: contain;
+              transition: transform 0.3s ease;
+
+              &:hover {
+                transform: scale(1.05);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@media screen and (max-width: 600px) {
+  .qe_auth_container {
+    min-height: 95vh;
+
+    .qe_auth_glassBox {
+      padding: 0.5rem;
+
+      .qe_auth_content {
+        padding: 1.5rem;
+
+        .qe_auth_header {
+          .qe_auth_title {
+            font-size: 1.5rem;
+          }
+
+          .qe_auth_subtitle {
+            font-size: 0.8rem;
+          }
+        }
+
+        .qe_auth_form {
+          .qe_auth_inputWrapper {
+            .qe_auth_inputGroup {
+              .qe_auth_input {
+                padding: 0.7rem 1rem 0.7rem 2.8rem;
+              }
+            }
+          }
+        }
+
+        .qe_auth_footer {
+          .qe_auth_company {
+            .qe_auth_companyText {
+              .qe_auth_companyLogo {
+                height: 25px;
+                max-width: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.qe_fbr_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  background: #fff;
+
+  .qe_fbr_imageSection {
+    background: linear-gradient(135deg, #4776e6 0%, #8e54e9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    .qe_fbr_brandingWrapper {
+      text-align: center;
+      color: white;
+
+      .qe_fbr_brandLogo {
+        font-size: 4rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+
+        .qe_fbr_brandQ {
+          color: #90caf9;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .qe_fbr_brandText {
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 4px;
+        margin-bottom: 1rem;
+      }
+
+      .qe_fbr_brandDivider {
+        width: 60%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.3);
+        margin: 1rem auto;
+      }
+
+      .qe_fbr_brandTagline {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .qe_fbr_loginSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #f8f9fa;
+
+    .qe_fbr_loginWrapper {
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+
+      .qe_fbr_header {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        .qe_fbr_logoWrapper {
+          margin-bottom: 1.5rem;
+
+          .qe_fbr_logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+
+            .qe_fbr_logoQ {
+              color: #4776e6;
+            }
+          }
+
+          .qe_fbr_logoText {
+            font-size: 0.8rem;
+            color: #666;
+            letter-spacing: 2px;
+          }
+        }
+
+        .qe_fbr_title {
+          font-size: 1.2rem;
+          color: #333;
+          font-weight: 600;
+          position: relative;
+          padding-bottom: 1rem;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: #4776e6;
+          }
+        }
+      }
+
+      .qe_fbr_form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        .qe_fbr_error {
+          padding: 0.8rem;
+          border-radius: 0.5rem;
+          background: rgba(255, 77, 79, 0.1);
+          color: #ff4d4f;
+          font-size: 0.9rem;
+          text-align: center;
+          animation: shake 0.5s ease-in-out;
+        }
+
+        .qe_fbr_inputGroup {
+          position: relative;
+
+          .qe_fbr_inputIcon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            transition: color 0.3s ease;
+          }
+
+          .qe_fbr_input {
+            width: 100%;
+            padding: 0.8rem 1rem 0.8rem 3rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+
+            &:focus {
+              outline: none;
+              border-color: #4776e6;
+              box-shadow: 0 0 0 3px rgba(71, 118, 230, 0.1);
+
+              & + .qe_fbr_inputIcon {
+                color: #4776e6;
+              }
+            }
+          }
+
+          .qe_fbr_passwordToggle {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #4776e6;
+            }
+          }
+        }
+
+        .qe_fbr_button {
+          padding: 0.8rem;
+          border: none;
+          border-radius: 0.5rem;
+          background: linear-gradient(135deg, #4776e6 0%, #8e54e9 100%);
+          color: white;
+          font-weight: 600;
+          font-size: 1rem;
+          cursor: pointer;
+          text-align: center;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(71, 118, 230, 0.4);
+          }
+
+          .qe_fbr_buttonGlow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(45deg);
+            animation: glow 3s linear infinite;
+            pointer-events: none;
+          }
+        }
+
+        .qe_fbr_forgotLink {
+          text-align: center;
+          color: #666;
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #4776e6;
+          }
+        }
+      }
+
+      .qe_fbr_footer {
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-top: 1px solid #eee;
+
+        .qe_fbr_poweredBy,
+        .qe_fbr_supportedBy {
+          font-size: 0.8rem;
+          color: #666;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          span {
+            margin-bottom: 0.3rem;
+          }
+
+          strong {
+            color: #333;
+            font-weight: 600;
+          }
+        }
+
+        .qe_fbr_poweredBy {
+          .qe_fbr_swsLogo {
+            height: 30px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }  
+
+        .qe_fbr_supportedBy {
+          .qe_fbr_fbrLogo {
+            height: 35px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+
+
+        .qe_fbr_supportedBy {
+          .qe_fbr_fbrText {
+            font-size: 0.7rem;
+            color: #999;
+            margin-top: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes glow {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@media screen and (max-width: 1024px) {
+  .qe_fbr_container {
+    grid-template-columns: 1fr;
+
+    .qe_fbr_imageSection {
+      display: none;
+    }
+
+    .qe_fbr_loginSection {
+      padding: 1rem;
+
+      .qe_fbr_loginWrapper {
+        padding: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .qe_fbr_loginSection {
+    .qe_fbr_loginWrapper {
+      .qe_fbr_header {
+        .qe_fbr_logo {
+          font-size: 2rem;
+        }
+
+        .qe_fbr_title {
+          font-size: 1rem;
+        }
+      }
+
+      .qe_fbr_form {
+        .qe_fbr_input {
+          font-size: 0.85rem;
+        }
+      }
+
+      .qe_fbr_footer {
+        flex-direction: column;
+        gap: 1rem;
+
+        .qe_fbr_poweredBy,
+        .qe_fbr_supportedBy {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

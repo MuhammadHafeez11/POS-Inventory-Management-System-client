@@ -1,0 +1,85 @@
+.GlobalDesignPage.theme-white, .GlobalDesignPage.theme-blue, .GlobalDesignPage.theme-gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 92vh;
+    border-radius: 2rem;
+  }
+
+
+  .secondContainer{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin: 18vh 2vh 0 2vh;
+    height: 95%;
+    width: 100%;
+    padding: 20px;
+    background: var(--glass);
+
+    .contentt-box 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+
+        .heading-container {
+            display: flex; /* Display h3 and h5 in a row */
+            flex-direction: row; /* Align h3 and h5 vertically */
+
+           > h3 {
+                line-height: 1.3;
+                margin: 0;
+                font-size: 26px;
+              }
+              
+            >h5 {
+                line-height: 1.5;
+                margin: 0;
+                font-size: 20px;
+
+                .total-records {
+  
+                    background: var(--lightPurple);
+                    color: #ffffff; /* Add your desired text color here */
+                    padding: 2px 5px; /* Add padding to create spacing around the background color */
+                    margin-left: 10px;
+                    border-radius: 4px; /* Optionally, add border radius for rounded corners */
+                  }
+
+                .rowCount {
+                    background-color: white; 
+                    /* background: var(--backColor); */
+                    color: #222; /* Add your desired text color here */
+                    padding: 2px 5px; /* Add padding to create spacing around the background color */
+                    border-radius: 4px; /* Optionally, add border radius for rounded corners */
+                  }
+              }
+          }
+
+          .excelDiv {
+            > button {
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            letter-spacing: 0.02857em;
+            text-transform: uppercase;
+            max-width: 160px;
+            margin-left: 10px;
+            padding: 5px 15px 5px 15px;
+            border: 1px solid rgb(119, 7, 7);
+          color: rgb(119, 7, 7);
+            justify-content: space-between;
+            border-radius: 4px;
+          }
+
+          > span > svg {
+            color: rgb(119, 7, 7);
+          }
+        
+          }
+      }
+
+}

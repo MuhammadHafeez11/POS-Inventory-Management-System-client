@@ -1,0 +1,79 @@
+// .Product.theme-white {
+    
+//     .heightSetting {
+//       max-height: 90%;
+//       background: var(--glass);
+//     }
+    
+//   } 
+
+  .table-container {
+    height: 40vh;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+
+    .heightSetting {
+      max-height: 90%;
+      background: var(--glass);
+
+      .customTable {
+        border-collapse: separate;
+        // border-spacing: 0 10px; 
+        width: 100%; 
+        > tHead {
+          > tr{
+            > th {
+              z-index: 0;
+            }
+          }
+        }
+        
+
+        .TableRow {
+          // border-right: 1px solid #707070; /* Adjust the color as needed */
+          padding: 10px; /* Adjust the padding as needed */
+        }
+
+        .TableCell {
+          border-bottom: none; /* Remove the bottom border */
+        }
+
+        .oddRow {
+          background-color: var(--oddRow);
+          border-right: 1px solid #707070;
+        }
+
+        .evenRow {
+          background-color: var(--evenRow); /* Set the background color for even rows */
+          border-right: 1px solid #707070;
+        }
+
+        .border-Right {
+          border-right: 1px solid #707070;
+        }
+        .custom-table-pagination  {
+          .css-16c50h-MuiInputBase-root-MuiTablePagination-select {
+            display: none;
+          }
+
+          .MuiTablePagination-input {
+            display: none;
+          }
+        }
+      }
+    
+    }
+
+}  
+
+   .custom-table-pagination  {
+    .css-16c50h-MuiInputBase-root-MuiTablePagination-select {
+      display: none;
+    }
+
+    .MuiTablePagination-input {
+      display: none;
+    }
+  }

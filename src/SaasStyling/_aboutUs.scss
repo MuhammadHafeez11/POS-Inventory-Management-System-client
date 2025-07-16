@@ -1,0 +1,123 @@
+.settingSecondContainer {
+    .about-us-content {
+      width: 100%;
+      height: 100%;
+      max-width: 800px;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin: 0 auto; 
+      margin-bottom: 2rem;
+      
+      @media (max-width: 768px) {
+        padding: 1.5rem;
+      }
+      
+      .about-us-title {
+        font-size: 2rem;
+        color: #2d3748;
+        margin-bottom: 2rem;
+        text-align: center;
+        
+        @media (max-width: 768px) {
+          font-size: 1.75rem;
+        }
+      }
+      
+      .about-us-info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+        
+        .about-us-info-item {
+          background: #f7fafc;
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          text-align: center;
+          height: fit-content;
+          
+          h3 {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin: 0.5rem 0;
+          }
+          
+          p {
+            font-size: 1rem;
+            color: #2d3748;
+            font-weight: 600;
+            margin: 0;
+          }
+          
+          .about-us-icon {
+            font-size: 2rem;
+            color: #4299e1;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+      
+      .about-us-description {
+        background: #f7fafc;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        
+        .about-us-icon {
+          margin: 0;
+          flex-shrink: 0;
+        }
+        
+        p {
+          font-size: 1rem;
+          color: #4a5568;
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+      
+      .about-us-mission {
+        background: #ebf8ff;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        
+        h2 {
+          font-size: 1.5rem;
+          color: #2d3748;
+          margin: 0 0 1rem 0;
+        }
+        
+        p {
+          font-size: 1rem;
+          color: #4a5568;
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  // Keep this outside for theme variations if needed
+  .about-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 64px);
+    margin-top: 64px;
+    padding: 2rem;
+    background: linear-gradient(to right bottom, #ebf8ff, #bee3f8);
+    overflow-y: auto;
+    
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }  

@@ -1,0 +1,105 @@
+.headerr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+    // white-space: nowrap;
+    width: 100%;
+    // margin-left: 100px;
+  }
+
+  .headerr .headerTitle {
+  font-size: 18px;
+  margin-left: 60px;
+  white-space: nowrap;
+  }
+
+@media print {
+  body {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ThermalPrinter {
+    width: 80mm;
+    padding: 10mm;
+    border: 1px solid black;
+    margin: 0;
+  }
+
+  .headerr {
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 20px;
+  }
+
+  .headerr h1 {
+  font-size: 18px;
+  margin-left: 40px;
+  text-align: center;
+  }
+
+  .headerr .invoiceAddress {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .dates {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+
+  .InvoiceThermalFirstRecord,
+  .consolidateHeaderThermalColumn,
+  .consolidateThermalColumn {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .consolidateThermalQuantity h5,
+  .consolidateThermalQuantity p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+
+  .InvoiceThermalFirstRecord .consolidateThermalQuantity {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table th,
+  table td {
+    border: 1px solid black;
+    padding: 2px;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  table th {
+    background-color: #f0f0f0;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  @page {
+    margin: 0;
+  }
+
+  .no-print {
+    display: none;
+  }
+}

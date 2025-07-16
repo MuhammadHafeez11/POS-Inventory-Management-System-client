@@ -1,0 +1,370 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap");
+@import "navbar";
+@import "sidebar";
+@import "catelogue";
+@import "table";
+@import "availableProducts";
+@import "globalPageDesign";
+@import "color";
+@import "company";
+@import "wareHouse";
+@import "cashDeposit";
+@import "expense";
+@import "purchase";
+@import "sale";
+@import "transfer";
+@import "users";
+@import "settingComponent";
+@import "Dashboard/dashboard";
+@import "productType";
+@import "expenseType";
+@import "model";
+@import "branches";
+@import "printInvoice";
+@import "theme";
+@import "permissionSetting";
+@import "Loader";
+@import "fbrLogin";
+// @import "FBRLogin";
+@import "thermalPrinter";
+@import "saleCreditPreview";
+@import "purchaseApproval";
+@import "aboutUs";
+@import "roleAssign";
+@import "updateProfileUser";
+@import "systemSetting";
+@import "barcodeGenerator";
+@import "multipleBarcodeGenerator";
+@import "invoiceDetailsModal";
+// @import "adminPrintStyles";
+
+$theme: blue;
+:root {
+  --yellow: linear-gradient(180deg, #A8D9F0 -146.42%, #9BD6F7 -46.42%);
+  --orange: #3CA0DC;
+  --black: #242d49; /* unchanged */
+  --gray: #788097; /* unchanged */
+  --purple: linear-gradient(180deg, #76B3FF 0%, #5B92F3 100%);
+  --pink: #82C0FF; /* soft blue */
+  --lightPurple: linear-gradient(180deg, #91BBE7 0%, #74A6F4 100%);
+  --buttonAdd: linear-gradient(180deg, #91BBE7 0%, #74A6F4 100%);
+  --buttonAddHover: linear-gradient(180deg, #5481BD 0%, #4B6D88 100%);
+  --buttonBack: linear-gradient(180deg, #A8D9F0 -146.42%, #9BD6F7 -46.42%);
+  --buttonBackHover: linear-gradient(180deg, #76A3C1 -146.42%, #82B7E2 -46.42%);
+  --glass: rgba(255, 255, 255, 0.54); /* unchanged */
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%); /* unchanged */
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08); /* unchanged */
+  --searchBox: rgba(255, 255, 255, 0.54); /* unchanged */
+  --dropDownColor: #8EC7F3;
+  --scrollColor: #8EC7F3;
+  --oddRow: #a9d4f5;
+  --evenRow: white;
+  --salesBoxBackground: linear-gradient(180deg, #6A9FED 0%, #4C7CCB 100%);
+  --saleBoxShadow: 0px 10px 20px 0px #94c0ed;
+  --salesBoxTextColor: #FFFFFF;
+  --purchaseBoxBackground: linear-gradient(180deg, #6DE1F2 0%, #4DBBD1 100%);
+  --purchaseBoxShadow: 0px 10px 20px 0px #609ca8;
+  --purchaseBoxTextColor: #FFFFFF;
+  --expensesBoxBackground: linear-gradient(180deg, #B3E5FC 0%, #81D4FA 100%);
+  --expenseBoxShadow: 0px 10px 20px 0px #4b93b4;
+  --expensesBoxTextColor: #242d49; /* Dark text for better readability */  
+  --loaderColorBefore: linear-gradient(
+    106.37deg,
+    #8EC7F3 29.63%,
+    #82AADB 51.55%,
+    #6FA0CD 90.85%
+  );
+  --loaderColorAfter: #4B6D88;
+  --navBarColor: linear-gradient(
+    106.37deg,
+    #8EC7F3 29.63%,
+    #82AADB 51.55%,
+    #6FA0CD 90.85%
+  );
+  --sideBarColor: linear-gradient(
+    106.37deg,
+    #8EC7F3 29.63%,
+    #82AADB 51.55%,
+    #6FA0CD 90.85%
+  );
+  --backColor: linear-gradient(
+    106.37deg,
+    #b3e5fc 29.63%,
+    #b2ebf2 51.55%,
+    #81d4fa 90.85%
+  );
+  --sideBarHover: linear-gradient(180deg, #b3e5fc 0%, #b2ebf2 100%);
+  --ActiveSideBar: linear-gradient(180deg, #b3e5fc 0%, #b2ebf2 100%);
+  --activeItem: #76C7E4;
+
+}
+
+.theme-blue {
+  --yellow: linear-gradient(180deg, #A8D9F0 -146.42%, #9BD6F7 -46.42%);
+  --orange: #3CA0DC;
+  --black: #242d49; /* unchanged */
+  --gray: #788097; /* unchanged */
+  --purple: linear-gradient(180deg, #76B3FF 0%, #5B92F3 100%);
+  --pink: #82C0FF; /* soft blue */
+  --lightPurple: linear-gradient(180deg, #91BBE7 0%, #74A6F4 100%);
+  --buttonAdd: linear-gradient(180deg, #91BBE7 0%, #74A6F4 100%);
+  --buttonAddHover: linear-gradient(180deg, #5481BD 0%, #4B6D88 100%);
+  --buttonBack: linear-gradient(180deg, #A8D9F0 -146.42%, #9BD6F7 -46.42%);
+  --buttonBackHover: linear-gradient(180deg, #76A3C1 -146.42%, #82B7E2 -46.42%);
+  --glass: rgba(255, 255, 255, 0.54); /* unchanged */
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%); /* unchanged */
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08); /* unchanged */
+  --searchBox: rgba(255, 255, 255, 0.54); /* unchanged */
+  --dropDownColor: #8EC7F3;
+  --scrollColor: #8EC7F3;
+  --oddRow: #a9d4f5;
+  --evenRow: white;
+  --salesBoxBackground: linear-gradient(180deg, #6A9FED 0%, #4C7CCB 100%);
+  --saleBoxShadow: 0px 10px 20px 0px #94c0ed;
+  --salesBoxTextColor: #FFFFFF;
+  --purchaseBoxBackground: linear-gradient(180deg, #6DE1F2 0%, #4DBBD1 100%);
+  --purchaseBoxShadow: 0px 10px 20px 0px #609ca8;
+  --purchaseBoxTextColor: #FFFFFF;
+  --expensesBoxBackground: linear-gradient(180deg, #B3E5FC 0%, #81D4FA 100%);
+  --expenseBoxShadow: 0px 10px 20px 0px #4b93b4;
+  --expensesBoxTextColor: #242d49; /* Dark text for better readability */  
+  --loaderColorBefore: linear-gradient(
+    106.37deg,
+    #8EC7F3 29.63%,
+    #82AADB 51.55%,
+    #6FA0CD 90.85%
+  );
+  --loaderColorAfter: #4B6D88;
+  --navBarColor: linear-gradient(
+    106.37deg,
+    #8EC7F3 29.63%,
+    #82AADB 51.55%,
+    #6FA0CD 90.85%
+  );
+  --sideBarColor: linear-gradient(
+    106.37deg,
+    #8EC7F3 29.63%,
+    #82AADB 51.55%,
+    #6FA0CD 90.85%
+  );
+  --backColor: linear-gradient(
+    106.37deg,
+    #b3e5fc 29.63%,
+    #b2ebf2 51.55%,
+    #81d4fa 90.85%
+  );
+  --sideBarHover: linear-gradient(180deg, #b3e5fc 0%, #b2ebf2 100%);
+  --ActiveSideBar: linear-gradient(180deg, #b3e5fc 0%, #b2ebf2 100%);
+  --activeItem: #76C7E4;
+}
+
+.theme-gradient {
+  --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: #788097;
+  --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
+  --pink: #FF919D;
+  --lightPurple: linear-gradient(180deg, #b982e7 0%, #d9b4f4 100%);
+  --buttonAdd: linear-gradient(180deg, #b982e7 0%, #d9b4f4 100%);
+  --buttonAddHover: linear-gradient(180deg, #8e54bd 0%, #725288 100%);
+  --buttonBack: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
+  --buttonBackHover: linear-gradient(180deg, #f0b351 -146.42%, #dfbb82 -46.42%);
+  --glass: rgba(255, 255, 255, 0.54);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --searchBox: rgba(255, 255, 255, 0.54);
+  --backColor: linear-gradient(
+    106.37deg,
+    #ffe1bc 29.63%,
+    #ffcfd1 51.55%,
+    #f3c6f1 90.85%
+  );
+  --sideBarHover:  linear-gradient(180deg, #ffdab9 0%, #ffd6ff 100%);
+  --ActiveSideBar:  linear-gradient(180deg, #ffdab9 0%, #ffd6ff 100%);
+  --activeItem: #f799a354;
+
+  /* Added variables for navbar, sidebar, and table background */
+  --navBarColor: linear-gradient(106.37deg, #F8D49A 29.63%, #FAD79D 51.55%, #f0b351 90.85%);
+  --sideBarColor: linear-gradient(180deg, #ffdab9 0%, #ffd6ff 100%);
+  --tableColor: linear-gradient(106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85%);
+}
+
+.theme-white {
+  --yellow: #f5f5f5;
+  --orange: #e0e0e0;
+  --black: #2c2c2c; /* Darker black for text readability */
+  --gray: #b0b0b0; /* Softer gray for subtle contrasts */
+  --purple: #ececec;
+  --pink: #f9f9f9;
+  --lightPurple: #e8e8e8;
+  --buttonAdd: #aa9898;
+  --buttonAddHover: #dcdcdc;
+  --buttonBack: #f7f7f7;
+  --buttonBackHover: #e0e0e0;
+  --glass: rgba(255, 255, 255, 0.85); /* Slightly more opaque for better contrast */
+  --boxShadow: 0px 19px 60px rgba(0, 0, 0, 0.05);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --searchBox: rgba(245, 245, 245, 0.9);
+  --navBarColor: #ffffff; /* Pure white navbar */
+  --sideBarColor: #f2f2f2; /* Light gray sidebar */
+  --backColor: #f9f9f9; /* Slightly off-white for body background */
+  --sideBarHover: #eaeaea; /* Slight contrast for sidebar hover */
+  --ActiveSideBar: #e5e5e5; /* Active sidebar with slight contrast */
+  --activeItem: #cccccc; /* Light gray for active items */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  user-select: none;
+  max-height: 91vh;
+  background: var(--backColor);
+  // font-family: "Euclid Circular A";
+
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  @apply bg-teal-50 overflow-x-hidden;
+}
+
+$color1: white;
+$color2: rgb(46, 46, 46);
+$color3: rgb(0, 104, 136);
+
+.red{
+  color: red;
+}
+
+.purple{
+  color: rgb(47, 0, 255);
+}
+
+.green{
+  color: rgb(0, 195, 0);
+}
+
+.container {
+  max-width: 1367px;
+  width: 100%;
+  margin: auto;
+  overflow: auto;
+
+  > h1 {
+      // @include heading;
+      margin: 1rem 0;
+      text-align: left;
+  }
+}
+
+
+.header {
+// @include flex(row, flex-end, stretch, 1.2rem);
+padding: 1rem;
+
+a {
+  color: $color2;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+
+  &:hover {
+      color: $color3;
+  }
+}
+
+button {
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+      color: $color3;
+  }
+}
+
+dialog {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  left: calc(100% - 100px);
+  top: 8%;
+
+  > div {
+      // @include flex(column, flex-start, center, 0.25rem)
+  }
+}
+}
+
+
+.heading {
+  // @include heading;
+  margin: 1rem 0;
+  text-align: center;
+
+}
+
+        
+.buttonAppRow .printer-select-container {
+  position: relative;
+  margin-left: auto;
+}
+
+.buttonAppRow .printer-select-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--buttonAdd);
+  pointer-events: none;
+}
+
+.buttonAppRow .printer-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: hsl(217deg 91% 60% / 47%);
+  color: #333;
+  font-size: 17px;
+  padding: 10px 30px 10px 15px;
+  background-image: url("data:image/svg+xml,%3Csvg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 41px;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 48%);
+  min-width: 180px;
+}
+
+.buttonAppRow .printer-select:hover,
+.buttonAppRow .printer-select:focus {
+  // background-color: var(--buttonBackHover, #e0e0e0);
+  outline: none;
+}
+
+.buttonAppRow .printer-select option {
+  background-color: white;
+  color: #333;
+  padding: 8px;
+}

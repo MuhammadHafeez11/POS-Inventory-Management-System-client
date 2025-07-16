@@ -1,0 +1,575 @@
+.Sale.theme-white, .Sale.theme-blue, .Sale.theme-gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 92vh;
+    border-radius: 2rem;
+}
+
+.secondContainer{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin: 18vh 2vh 0 2vh;
+    height: 95%;
+    width: 100%;
+    padding: 20px;
+    background: var(--glass);
+
+
+    .contentt-box 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+
+        .heading-container {
+            display: flex; /* Display h3 and h5 in a row */
+            flex-direction: row; /* Align h3 and h5 vertically */
+
+           > h3 {
+                line-height: 1.3;
+                margin: 0;
+                font-size: 26px;
+              }
+              
+            >h5 {
+                line-height: 1.5;
+                margin: 0;
+                font-size: 20px;
+
+                .total-records {
+  
+                    background: var(--lightPurple);
+                    color: #ffffff; /* Add your desired text color here */
+                    padding: 2px 5px; /* Add padding to create spacing around the background color */
+                    margin-left: 10px;
+                    border-radius: 4px; /* Optionally, add border radius for rounded corners */
+                  }
+
+                .rowCount {
+                    background-color: white; 
+                    /* background: var(--backColor); */
+                    color: #222; /* Add your desired text color here */
+                    padding: 2px 5px; /* Add padding to create spacing around the background color */
+                    border-radius: 4px; /* Optionally, add border radius for rounded corners */
+                  }
+              }
+          }
+
+          .excelDiv {
+            > button {
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            letter-spacing: 0.02857em;
+            text-transform: uppercase;
+            max-width: 154px;
+            margin-left: 10px;
+            padding: 5px 15px 5px 15px;
+            border: 1px solid rgb(119, 7, 7);
+          color: rgb(119, 7, 7);
+            justify-content: space-between;
+            border-radius: 4px;
+          }
+
+          > span > svg {
+            color: rgb(119, 7, 7);
+          }
+        
+          }
+    }
+
+
+    .Sale-Input-Section 
+    {
+        width: 100%;
+        height: 15%;
+        padding: 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        background: var(--searchBox);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        // margin: auto;
+
+        .formApp{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
+            gap: 15px;
+            width: 100%;
+
+            .formRow {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                width: 100%;
+        
+                .inputSection {
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+        
+                    > input  {
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid hsl(217, 91%, 60%, 30%);
+                    height: 3rem;
+                    border-radius: 4px;
+                    }
+                }
+                
+            }
+
+            .buttonRow {   
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                gap: 10px;
+                width: 80%;
+        
+                > button {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  width: 200px;
+                  font-size: 17px;
+                  padding: 10px;
+                  border: none;
+                  cursor: pointer;
+                  white-space: nowrap;
+        
+                    > svg {
+                    width: 20px;
+                    height: 20px;
+                    }
+                }
+                .button-add-product {
+                  background: var(--buttonAdd);
+            
+                  &:hover, &:focus {
+                    background: var(--buttonAddHover)
+                  }
+                }
+            
+                .button-back {
+                  background: var(--buttonBack);
+                  &:hover, &:focus {
+                    background: var(--buttonBackHover)
+                  }
+                }
+        
+            }
+        
+            .table-container {
+                height: 40vh;
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                background-color: transparent;
+        
+                .heightSetting {
+                    max-height: 80%;
+                    background: var(--glass);
+
+       
+                    }
+            }  
+        }
+    
+    
+    }
+
+
+    .formAppSecondSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 60vh;
+        padding: 10px;
+        background: var(--searchBox);
+        gap: 15px;
+        width: 100%;
+  
+        .buttonAppRow {   
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            gap: 10px;
+            width: 100%;
+    
+            > button {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              width: 200px;
+              font-size: 17px;
+              padding: 10px;
+              border: none;
+              cursor: pointer;
+              white-space: nowrap;
+    
+                > svg {
+                width: 20px;
+                height: 20px;
+                }
+            }
+            .button-add-product {
+              background: var(--buttonAdd);
+        
+              &:hover, &:focus {
+                background: var(--buttonAddHover)
+              }
+            }
+        
+            .button-back {
+              background: var(--buttonBack);
+              &:hover, &:focus {
+                background: var(--buttonBackHover)
+              }
+            }
+  
+        }
+  
+        .formRow {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          width: 80%;
+  
+          .inputSection {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+  
+            > input  {
+              width: 100%;
+              padding: 10px;
+              border: 2px solid hsl(217, 91%, 60%, 30%);
+              height: 3rem;
+              border-radius: 4px;
+            }
+          }
+          
+        }
+  
+        .table-container {
+          height: 40vh;
+          width: 100%;
+          align-items: center;
+          text-align: center;
+          background-color: transparent;
+          
+          .heightSetting {
+            max-height: 80%;
+            background: var(--glass);
+  
+         
+          }
+
+          .grandTotal{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: end;
+            > h2 {
+              display: flex;
+              flex-direction: row;
+              font-size: 1.7rem;
+            }
+          }
+      }  
+      
+     
+      }
+  
+      .search-box {
+        width: 100%;
+        height: 15%;
+        padding: 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        background: var(--backColor);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        // margin: auto;
+       
+        > input  {
+          width: 100%;
+          padding: 10px;
+          border: 2px solid hsl(217, 91%, 60%, 30%);
+          height: 3rem;
+          border-radius: 4px;
+        }
+        .dropdown  {
+          width: 100%;
+          padding: 10px;
+          height: 3rem;
+          border-radius: 4px;
+        
+      }
+        .rs-btn-close {
+            background: none;
+            width: 100%;
+          }
+          
+        .react-datepicker__input-container {
+          > input {
+            height: 2.7rem;
+            border: 1px solid hsl(217, 91%, 60%, 30%);
+          }
+        }
+      //   > .rs-picker-toggle-wrapper {
+      //     width: 100%;
+      //   }
+  
+      //  > .saleProfitDatePicker{
+      //   width: 100%;
+      //   height: 3rem;
+      //   border: 1px solid rgb(231, 231, 232);
+      //  }
+
+      > .saleProfitDatePicker, .rs-input-group.rs-input-group-inside, .react-datepicker-wrapper {
+        width: 100%;
+       }
+       
+       .react-datepicker {
+        > button {
+          background: none;
+          width: 20%;
+        }
+       }
+  
+        > button {
+        background: var(--buttonAdd);
+        align-items: center;
+        width: 50%;
+        height: 3rem;
+
+        >  .ui.loader {
+          display: relative !important;
+        }
+        }
+    }
+
+      .table-container {
+        height: 60vh;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        background-color: transparent;
+
+        .consolidatedDatesData {
+          display: flex;
+          flex-direction: column;
+          .InvoiceSecondCont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 50%;
+
+            .InvoiceThirdCont {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              .consolidateSaleLaserdivs {
+                display: flex;
+                flex-direction: row;
+                margin-right: 30px;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+
+        .consolidatedSaleTable{
+          height: 80%;
+          overflow: auto;
+        }
+        .heightSetting {
+          max-height: 90%;
+          background: var(--glass);
+        }
+    }  
+
+    .saleProduct-box 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        > button {
+          background: var(--buttonBack);
+        }
+    }
+
+
+    .saleCreditUpdateInputBox {
+      width: 100%;
+      height: 15%;
+      padding: 20px;
+      margin: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+      background: var(--backColor);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+
+      > input {
+        padding: 10px;
+        border: 2px solid hsl(217, 91%, 60%, 30%);
+        height: 3rem;
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      > button {
+        display: flex;
+        justify-content: center;
+        background: var(--buttonAdd);
+        align-items: center;
+        width: 50%;
+        height: 3rem;
+      }
+    }
+
+
+    .profit-table-container 
+    {
+      height: 80%;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      background-color: transparent;
+
+
+      .divSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color:  linear-gradient(
+          106.37deg,
+          #ffe1bc 29.63%,
+          #ffcfd1 51.55%,
+          #f3c6f1 90.85%
+        );
+        gap: 5px;
+        max-width: 98%;
+        margin: 1rem;
+        height: 30rem;
+  
+       .divBlock {
+          display: flex;
+          flex-direction: row;
+          white-space: nowrap;
+          width: 100%;
+          /* height: 100%; */
+          /* margin: 3px; */
+          border-radius: 0.7rem;
+          /* padding: 1rem; */
+          text-align: center;
+          /* align-items: center; */
+          position: relative;
+          /* cursor: pointer; */
+          /* background: linear-gradient(rgba(205, 197, 117, 0.905) 0%, rgb(232, 231, 205) 100%); */
+          background: var(--searchBox);
+          box-shadow: rgb(224, 198, 245) 0px 10px 20px 0px;
+            
+          .divDetails {
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+            width: 100%;
+            /* height: 100%; */
+            /* margin: 3px; */
+            border-radius: 0.7rem;
+            padding: 1rem;
+            text-align: center;
+            /* align-items: center; */
+            position: relative;
+            /* cursor: pointer; */
+         
+            >div {
+              display: flex;
+              flex-direction: row;
+              justify-content: start;
+              gap: 10px;
+              > svg {
+                width: 20px;
+                height: 20px;
+              }
+
+              > h5 {
+                display: flex;
+                width: 200px;
+                margin: 0;
+              }
+            }
+          }
+          
+          .divButton {
+            display: flex;
+            flex-direction: row;
+            white-space: nowrap;
+            width: 100%;
+            height: 20%;
+            place-content: end;
+            margin: 3px;
+            border-radius: 0.7rem;
+            padding: 1rem;
+            text-align: center;
+            /* align-items: center; */
+            position: relative;
+            /* cursor: pointer; */
+
+            > button {
+              width: fit-content;
+              height: fit-content;
+              font-size: small;
+              padding: 5px;
+              align-items: center;
+              border-radius: 5px;
+              background: var(--buttonBack);
+            }
+          }
+
+         
+        }
+      }
+
+      .consolidatedSaleTable{
+        max-height: 50%;
+        overflow: auto;
+      }
+      
+    }
+
+    .previewTableContent {
+      display: flex;
+      width: 100%;
+      height: 90%;
+      
+      .previewInvoice {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+}

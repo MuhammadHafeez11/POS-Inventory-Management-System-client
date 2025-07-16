@@ -1,0 +1,177 @@
+.page {
+    padding-top: 20px;
+    font-family: 'Helvetica';
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logoSection {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+  
+  .logoAndCompany {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    background-color: #FFA500; // Orange bar
+    width: 10px;
+    height: 40px; // Adjust height to your preference
+    margin-right: 10px;
+  }
+  
+  .companyInfo {
+    margin-left: 10px;
+  }
+  
+  .companyName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .companyDetails {
+    font-size: 10px;
+    color: #555;
+  }
+  
+  // Billing Section
+  .billToSection {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .billToLabel {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .billingDetails {
+    font-size: 10px;
+    color: #555;
+  }
+  
+  // Invoice Title Section
+  .invoiceTitleSection {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .invoiceBadge {
+    background-color: #FFA500; // Orange background
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  
+  .invoiceText {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .invoiceDetails {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 10px;
+    color: #555;
+    text-align: right;
+  }
+  
+  .label {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 4px;
+  }
+  
+  .text {
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 2px;
+  }
+  
+  .table {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .tableHeader {
+    display: flex;
+    border-bottom: 1px solid black;
+    padding-bottom: 6px;
+  }
+  
+  .tableRow {
+    display: flex;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .description {
+    width: 50%;
+    text-align: left;
+    font-size: 12px;
+    padding: 4px;
+  }
+  
+  .column {
+    width: 15.66%;
+    text-align: center;
+    font-size: 8px;
+    padding: 4px;
+    white-space: nowrap;
+  }
+  
+  .rowColumn {
+    width: 15.66%;
+    text-align: center;
+    font-size: 8px;
+    padding: 4px;
+    white-space: nowrap;
+  }
+  
+  .totalsRow {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 12px;
+    width: 50%;
+    text-align: left;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .totalSection {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .terms {
+    margin-top: 30px;
+    font-size: 10px;
+    color: #555;
+  }
+  
+  .footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    color: #000;
+  }
+  

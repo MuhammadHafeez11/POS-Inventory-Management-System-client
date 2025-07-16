@@ -1,0 +1,183 @@
+.Permission.theme-white, .Permission.theme-blue, .Permission.theme-gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 92vh;
+    border-radius: 2rem;
+  }
+
+  .settingSecondContainer{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin: 0vh 2vh 0 2vh;
+    height: 90%;
+    width: 100%;
+    padding: 20px;
+    background: var(--glass);
+    .search-box {
+        width: 100%;
+        height: 15%;
+        padding: 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        background: var(--backColor);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    
+        > input {
+          width: 100%;
+          padding: 10px;
+          border: 2px solid hsl(217, 91%, 60%, 30%);
+          height: 3rem;
+          border-radius: 4px;
+        }
+
+        .dropdown  {
+            width: 100%;
+            padding: 10px;
+            height: 3rem;
+            border-radius: 4px;
+          
+        }
+  
+    //    > .saleProfitDatePicker, .rs-input-group.rs-input-group-inside {
+    //     width: 100%;
+    //     height: 3rem;
+    //     border: 1px solid rgb(231, 231, 232);
+    //    }
+  
+        button {
+        background: var(--buttonAdd);
+        align-items: center;
+        width: 30%;
+        height: 3rem;
+        }
+    }
+
+    .customchange {
+        width: 100%;
+        height: 80%;
+        padding: 20px;
+        background: var(--backColor);
+
+        .setting-input-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            gap: 20px;
+            place-items: center;
+            > label, input {
+                width: 30%;
+            }
+
+        }
+
+        .DropdownDiv {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            > svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            > p {
+                width: 20%;
+            }
+
+            .aboutText {
+                width: 100%;
+            }
+        }
+    }
+
+    .table-container {
+        height: 60vh;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        background-color: transparent;
+
+        .heightSetting {
+          max-height: 90%;
+          background: var(--glass);
+        }
+    }  
+
+}
+
+.permissionsSecondContainer {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin: 18vh 2vh 0 2vh;
+    height: 95%;
+    width: 100%;
+    padding: 20px;
+    background: var(--glass);
+  
+    .contentt-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+  
+      .heading-container {
+        display: flex;
+        /* Display h3 and h5 in a row */
+        flex-direction: row;
+        /* Align h3 and h5 vertically */
+
+        >div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+  
+        >h3 {
+          line-height: 1.3;
+          margin: 0;
+          font-size: 26px;
+        }
+  
+        >h5 {
+          line-height: 1.5;
+          margin: 0;
+          font-size: 20px;
+  
+          .total-records {
+  
+            background: var(--lightPurple);
+            color: #ffffff;
+            /* Add your desired text color here */
+            padding: 2px 5px;
+            /* Add padding to create spacing around the background color */
+            margin-left: 10px;
+            border-radius: 4px;
+            /* Optionally, add border radius for rounded corners */
+          }
+        }
+      }
+  
+    }
+
+    .CheckBoxDiv {
+        display: flex;
+        flex-direction: column;
+        // gap: 10px; 
+        margin-top: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+        // height: 1rem;
+    }
+  }

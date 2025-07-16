@@ -1,0 +1,68 @@
+.transferChartContainer {
+    display: flex;
+    margin-top: 2vh;
+    /* width: 100%; */
+    max-height: 100%;
+  }
+  .apexcharts-toolbar {
+    top: auto !important;
+    bottom: 3;
+  }
+  
+.transferBarChart {
+    /* margin-top: 1%; */
+    margin-bottom: 10%;
+    padding: 10px;
+    width: 50%;
+    height: 95%;
+}
+.transferPieChart {
+    width: 50%;
+}
+
+
+.sales-breakdown-container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+
+  }
+  
+  .data-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    margin-right: 30px;
+  }
+  
+  .abcd {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+  .color-box {
+    margin-left: 40px;
+    margin-top: 5px;
+    height: 10px;
+    width: 10px;
+    /* Add styles for the color box */
+  }
+  .data-label {
+    margin-left: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    /* Add styles for the data label */
+  }
+  
+  
+  .data-text-bold {
+    margin-left: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    /* Add styles for the bold data text */
+  }
+  

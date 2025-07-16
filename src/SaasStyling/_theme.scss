@@ -1,0 +1,147 @@
+.Theme.theme-white, .Theme.theme-blue, .Theme.theme-gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 12vh 12px 12px 5px;
+    width: 100%;
+    height: 92vh;
+    
+    border-radius: 2rem;
+  }
+
+  .settingSecondContainer{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin: 0vh 2vh 0 2vh;
+    height: 90%;
+    width: 100%;
+    padding: 20px;
+    background: var(--glass);
+    .search-box {
+        width: 100%;
+        height: 15%;
+        padding: 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        background: var(--backColor);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        // margin: auto;
+    
+        > input {
+          width: 100%;
+          padding: 10px;
+          border: 2px solid hsl(217, 91%, 60%, 30%);
+          height: 3rem;
+          border-radius: 4px;
+        }
+
+        .dropdown  {
+          width: 100%;
+          padding: 10px;
+          height: 3rem;
+          border-radius: 4px;
+        
+      }
+  
+      //  > .saleProfitDatePicker, .rs-input-group.rs-input-group-inside {
+      //   width: 100%;
+      //   height: 3rem;
+      //   border: 1px solid rgb(231, 231, 232);
+      //  }
+  
+        button {
+        background: var(--buttonAdd);
+        align-items: center;
+        width: 50%;
+        height: 3rem;
+        }
+    }
+
+    .customchange {
+        width: 100%;
+        height: 80%;
+        padding: 20px;
+        background: var(--backColor);
+
+        .DropdownDiv {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            > svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            > p {
+                width: 20%;
+            }
+            
+        }
+        .theme-container 
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            gap: 10px;
+            padding: 10px;
+            > div {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 10px;
+            border: 2px solid #fff;
+            display: inline-block;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+
+            &.active {
+                opacity: 1;
+              }
+            }
+          }
+
+    }
+}
+
+
+
+  #theme-gradient {
+    background: linear-gradient(
+      106.37deg,
+      #ffe1bc 29.63%,
+      #ffcfd1 51.55%,
+      #f3c6f1 90.85%
+    );
+  }
+
+  #theme-white {
+    background-color: #eee;
+  }
+  
+  #theme-blue {
+    background-color: #1e41e1;
+  }
+  
+  #theme-orange {
+    background-color: #b64b1e;
+  }
+  
+  #theme-purple {
+    background-color: #7852ae;
+  }
+  
+  #theme-green {
+    background-color: #5faf3b;
+  }
+  
+  #theme-black {
+    background-color: #000;
+  }

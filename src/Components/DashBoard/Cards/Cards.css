@@ -1,0 +1,111 @@
+.Cards {
+  display: flex;
+  gap: 10px;
+  margin-top: 1vh;
+}
+
+.parentContainer{
+  width: 100%;
+}
+/* Cards.css */
+
+
+.dropdown-icon-container {
+  cursor: pointer;
+}
+.dropdown-box {
+  margin-top: 1vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  /* position: absolute; */
+  top: 50px; /* Adjust the top position based on your design */
+  right: 10px; /* Adjust the right position based on your design */
+ 
+  background-color: linear-gradient(
+    106.37deg,
+    rgb(187, 103, 255) 0%, 
+    rgb(196, 132, 243) 100%,
+    rgb(255, 145, 157) 0%, rgb(252, 146, 157) 100%);
+  border: 1px solid #ccc;
+  border-radius:  0.7rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+  /* z-index: 1000; */
+}
+
+.dropdown-box .ui.fluid.dropdown {
+  margin-left: 2vh;
+  margin-bottom: 1vh;
+  margin-right: 2vh;
+  display: block;
+  background-color: rgb(237, 187, 193);
+  /* width: 30% */
+}
+
+.dashboardDropdown1 {
+  margin-top: 1vh;
+  display: flex;
+  /* width: 3vh; */
+  /* position: absolute; */
+  /* top: 50px; 
+  right: 10px; */
+  background-color: linear-gradient(
+    106.37deg,
+    rgb(187, 103, 255) 0%, 
+    rgb(196, 132, 243) 100%,
+    rgb(255, 145, 157) 0%, rgb(252, 146, 157) 100%);
+
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+  /* z-index: 1000; */
+}
+.AdmindashboardDropdown1 {
+  margin-top: 1vh;
+ 
+  width: 50%;
+}
+
+/* .ui.dropdown>.text {
+  color: #393939 !important;
+} */
+.dashboardDropdown2 {
+  margin-top: 1vh;
+  display: flex;
+  width: 3vh;
+  /* position: absolute; */
+  /* top: 50px; 
+  right: 10px; */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+  /* z-index: 1000; */
+}
+
+
+.close-icon {
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+
+.dropdown-content {
+  padding: 10px;
+  /* Add additional styling for your dropdown content */
+}
+
+@media screen and (max-width: 1200px) {
+  .Cards{
+    flex-direction: column;
+  }
+  .parentContainer{
+    height: 9rem;
+  }
+}
+
+@media screen and (max-width: 768px)
+{
+  .Cards{
+    width: 90%;
+  }
+}
